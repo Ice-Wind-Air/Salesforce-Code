@@ -1,3 +1,20 @@
+HTML File
+
+<lightning-combobox name="title" label="Title" required
+                options={titles} onchange={syncTemplateAndJS} >
+</lightning-combobox>
+                
+<div class="slds-col slds-size_1-of-1 slds-m-top_x-small">
+            <lightning-input type="text" label="Last Name" required placeholder="Last Name" name="last"
+                onchange={syncTemplateAndJS} ></lightning-input>
+</div>
+
+<div class="slds-col slds-size_1-of-1 slds-m-top_x-small">
+            <lightning-button label="Submit" title="Primary action" onclick={handleButtonClick} variant="brand">
+            </lightning-button>
+</div>
+
+
 JS FILE
 
 //Register Button Clicked.
