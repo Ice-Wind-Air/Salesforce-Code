@@ -1,0 +1,36 @@
+JS FILE
+
+//Register Button Clicked.
+  handleButtonClick(event) {
+    console.log("Register clicked!");
+    //client side validation
+    const inputsValid = [...this.template.querySelectorAll('lightning-input,lightning-combobox ')]
+            .reduce((validSoFar, inputCmp) => {
+                        inputCmp.reportValidity();
+                        return validSoFar && inputCmp.checkValidity();
+            }, true);
+    
+    
+    if (inputsValid) {
+      this.clientmessage = '';
+    } else {
+      this.clientmessage = this.constmsgclient;
+      return;
+    }
+    //for spinner
+    this.registerjustclicked = true;
+    // submit to server    
+    serverReceiveVerifyEmail({ person: JSON.stringify(this.person) })
+      .then((info) => {
+        this.rawResponse = info; // for safe keeping
+        this.error = undefined;
+        this.result = JSON.parse(info);
+        this.registerjustclicked   = false; //to stop spinner
+        this.showmessagetemplate   = true; //  
+      })
+      .catch((error) => {
+        this.rawResponse = undefined;
+        this.setError(error);
+        this.registerjustclicked = false; // to stop spinner
+      });
+  }
