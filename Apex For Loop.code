@@ -1,0 +1,9 @@
+Update sObjects
+
+List<warehouse__C> centers = 
+				[select Id, Is_Book_Fair_Facility__c, Is_EFair_Facility__c from warehouse__C];
+for(warehouse__C center: centers){
+    center.Is_Book_Fair_Facility__c = true;
+				center.Is_eFair_Facility__c = true;
+}
+Update centers;
