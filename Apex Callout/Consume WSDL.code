@@ -1,0 +1,3 @@
+# Sample WSDL https://th-apex-soap-service.herokuapp.com/assets/parks.xml; https://trailhead.salesforce.com/content/learn/modules/apex_integration_services/apex_integration_soap_callouts
+# Classes  - Generate classes from WSDL
+# Add endpoint to 'Remote Sites' OR Named Credentials.
