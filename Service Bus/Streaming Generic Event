@@ -1,0 +1,14 @@
+# Create New Generic Event Type: 
+  Classic - Setup - Streaming Channel - New
+#Create Event Instance
+  ##POST: https://adityaincanada-dev-ed.my.salesforce.com/services/data/v50.0/sobjects/StreamingChannel/0M65a000000kAw0CAE/push
+  ##Auth: Oauth 2
+  ##Body: 
+    {
+     "pushEvents": [
+       {
+       "payload": "This is an important message!",
+       "userIds": []
+       }
+    ]
+   }  
