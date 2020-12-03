@@ -2,17 +2,48 @@
   ## Named Credenials
   ## Remote Site
 
-#Apex Code
-  // Instantiate a new http object
-  Http h = new Http();
+#Apex Code 
+  ## GET
+    // Instantiate a new http object
+    Http h = new Http();
 
-  // Instantiate a new HTTP request, specify the method (GET) as well as the endpoint
-  HttpRequest req = new HttpRequest();
-  req.setEndpoint('callout:FollettSF/wiki');
-  //req.setEndpoint('https://follettsf.azurewebsites.net/wiki');
-  req.setMethod('GET');
+    // Instantiate a new HTTP request, specify the method (GET) as well as the endpoint
+    HttpRequest req = new HttpRequest();
+    req.setEndpoint('callout:FollettSF/wiki');
+    //req.setEndpoint('https://follettsf.azurewebsites.net/wiki');
+    req.setMethod('GET');
 
-  // Send the request, and return a response
-  HttpResponse res = h.send(req);
-  String responseJson = res.getBody();
-  System.debug(responseJson);       
+    // Send the request, and return a response
+    HttpResponse res = h.send(req);
+    String responseJson = res.getBody();
+    System.debug(responseJson);       
+  
+  ## POST with Named Credentials(Named Principal) and Auth. Provider
+  
+    ### Configure new Auth.Provider. Define 3 endpoints: Auth, Token & Service. on:  https://putsreq.hiveeyes.org/
+      ### Auth Endpoint: 
+        // Build a response
+        var msg = 'Hello World';
+        uri = request.params.redirect_uri;
+        uri += '?code=myauthorizationcode&state='+request.params.state;
+        response.status = 302;
+        response.headers = {
+          'Location': uri
+        };
+      response.body = uri;
+     ### Token Endpoint: 
+      response.body ="{'access_token':'myaccesstoken'};
+  
+     ### Apex Code: [Annonomous window] 
+        // Instantiate a new http object
+        Http h = new Http();
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint('callout:Oauth_Simulator');
+        //req.setEndpoint('https://follettsf.azurewebsites.net/wiki');
+        req.setMethod('POST');
+
+        // Send the request, and return a response
+        HttpResponse res = h.send(req);
+        String responseJson = res.getBody();
+        System.debug(responseJson);
+        
