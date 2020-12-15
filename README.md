@@ -1,25 +1,16 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Ice-Wind-Air/Salesforce-Code/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Salesforce Code Atoms
+Salesforce concepts, configuration and Code in plain english. 
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+### Integration
 ```markdown
-Syntax highlighted code block
+# Inbound
+- Connected App
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
+# Outbound
+- Named Credentials
+- Remote Site Settings
 
 **Bold** and _Italic_ and `Code` text
 
