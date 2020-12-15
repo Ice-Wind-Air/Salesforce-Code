@@ -25,6 +25,38 @@ Concepts, configuration and Code in plain english.
 [Link](url) and ![Image](src)
 ```
 
+## LWC
+```markdown
+
+## Solutions
+  - Add Google-Captcha
+  - Capture User input
+  - Additional Templates
+  - Dynamic Table Headers
+  
+ ## Concepts 
+  
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+## Flows
+```markdown
+
+## Solutions
+  - Delete Blocked IP Ranges
+
+## Concepts 
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+
+
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
