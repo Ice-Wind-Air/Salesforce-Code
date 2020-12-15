@@ -13,12 +13,12 @@ Salesforce concepts, configuration and Code in plain english.
   - Outbound Messages
 
 # Service Bus
-  1. Streaming API
-    - Push Topics
-    - Generic Events
-  2. Platform Events
-    - Platform Events
-    - Change Data Topics
+  - Streaming API
+     1. Push Topics
+     2. Generic Events
+  - Platform Events
+     1. Platform Events
+     2. Change Data Topics
 
 **Bold** and _Italic_ and `Code` text
 
