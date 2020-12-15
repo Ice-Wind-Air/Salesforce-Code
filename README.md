@@ -1,8 +1,6 @@
 ## Salesforce Code Atoms
 Salesforce concepts, configuration and Code in plain english. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ### Integration
 ```markdown
 # Inbound
