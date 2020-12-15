@@ -41,6 +41,22 @@ Concepts, configuration and Code in plain english.
 [Link](url) and ![Image](src)
 ```
 
+## API(S)
+```markdown
+
+## Solutions
+  - List all sObjects
+  - Post to chatter
+
+## Concepts 
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+
+
 ## Flows
 ```markdown
 
@@ -54,8 +70,47 @@ Concepts, configuration and Code in plain english.
 [Link](url) and ![Image](src)
 ```
 
+## Bulk CRUD
+```markdown
 
+## Solutions
+  - Delete A Million Records
 
+## Concepts 
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+## Validation Rules
+```markdown
+
+## Solutions
+  - Prevent all but a particular Profile
+
+## Concepts 
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+## Apex
+```markdown
+
+## Solutions
+  - Calender Weeks in a Year. 
+
+## Test
+  - Test Outbound Service
+
+## Concepts 
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
