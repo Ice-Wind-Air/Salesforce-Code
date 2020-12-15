@@ -4,6 +4,7 @@ Salesforce concepts, configuration and Code in plain english.
 ### Integration
 ```markdown
 # Inbound
+#Inbound
 - Connected App
 
 # Outbound
