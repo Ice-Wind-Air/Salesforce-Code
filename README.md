@@ -5,20 +5,20 @@ Salesforce concepts, configuration and Code in plain english.
 ```markdown
 
 ### Inbound
-- Connected App
+  - Connected App
 
 # Outbound
-- Named Credentials
-- Remote Site Settings
-- Outbound Messages
+  - Named Credentials
+  - Remote Site Settings
+  - Outbound Messages
 
 # Service Bus
-1. Streaming API
-  - Push Topics
-  - Generic Events
-2. Platform Events
-  - Platform Events
-  - Change Data Topics
+  1. Streaming API
+    - Push Topics
+    - Generic Events
+  2. Platform Events
+    - Platform Events
+    - Change Data Topics
 
 **Bold** and _Italic_ and `Code` text
 
