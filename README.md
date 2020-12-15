@@ -87,7 +87,9 @@ Concepts, configuration and Code in plain english.   [Work in progress. Regret t
 ```markdown
 
 ## Solutions
-  - Prevent all but a particular Profile
+  - Prevent for all except for a: 
+    1. particular Profile
+    2. particular user
 
 ## Concepts 
 
