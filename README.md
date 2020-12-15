@@ -1,5 +1,5 @@
 ## Salesforce Code Atoms
-Salesforce concepts, configuration and Code in plain english. 
+Concepts, configuration and Code in plain english. 
 
 ## Integration
 ```markdown
