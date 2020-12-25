@@ -1,8 +1,14 @@
-## Salesforce Code Atoms
+## Salesforce Atoms
 Concepts, configuration and Code in plain english.   [Work in progress. Regret the inconvinience]
 
 ## Integration
 ```markdown
+
+### Author
+  - Chaudhary Aditya
+  - Salesforce Certified Developer -1
+  - Salesforce Certified Adminstrator
+
 
 ### Inbound
   - Connected App
