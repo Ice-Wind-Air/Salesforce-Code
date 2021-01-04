@@ -1,0 +1,16 @@
+#Find usage of an Object
+
+Postman: 
+
+1. Get Id of Component - {{uat.url}}/services/data/v39.0/tooling/query?q=Select+Id,+DeveloperName+from+CustomObject+where+developerName='car' // Response = 01I2J000001AIWX345
+2. Get Dependency by Id - {{uat.url}}/services/data/v50.0/tooling/query?q=Select MetadataComponentName,MetadataComponentType from MetadataComponentDependency where RefMetadataComponentId='01I2J000001AIWX345' and MetadataComponentType!='Report' and MetadataComponentType!='ReportType'
+
+JSFiddle: 
+
+array =  <<Value of 'Records' from JSON response>>
+
+array.filter ( function($tile)
+    {
+            return !($tile.MetadataComponentType).includes("Report");
+
+    }).forEach(function($tile){console.log($tile.MetadataComponentType + '   ----   ' +$tile.MetadataComponentName)});
