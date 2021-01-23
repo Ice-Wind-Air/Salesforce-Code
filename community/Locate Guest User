@@ -1,0 +1,2 @@
+Locate Guest User details(profile/name)
+  setup => sites => <<community name>> => public access settings => assigned users. 
