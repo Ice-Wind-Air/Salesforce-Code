@@ -1,0 +1,51 @@
+Problem Statement - (Salesforce Create Case Component)- Assign case created in Community to different queues. Create Case Layout is based off Global Actions. 
+
+Solution#1: After Trigger and Custom meta data.
+
+Summary:  
+1. Populate 'Case Origin' when creating the case.
+2. Create Meta Data records to store - 'Case Origin' and Queue names.
+
+Components:
+1. Custom Meta Data 
+2. Trigger (After Insert)
+3. Pre populate field(Case Origin) with Unique values in Global Actions.
+
+
+Code: 
+
+Trigger:
+
+public class CaseTriggerHandler {
+
+    private static Map<string, Id> commCaseOriginToQueueId;
+
+    public CaseTriggerHandler(){
+        setCommCaseOriginToQueueId();
+    }
+
+    public static void ressignCommunityCaseToQueue(final List<Case> cases){
+        List<Case> revisedCases = new List<Case>();
+        Set<String> commCaseOrigins = commCaseOriginToQueueId.keySet();
+        for(Case caseRecord: cases){
+            String caseOrigin  = caseRecord.Origin;
+            if(commCaseOrigins.contains(caseRecord.Origin)){
+                revisedCases.add(new Case(Id=caseRecord.Id, ownerId=commCaseOriginToQueueId.get(caseOrigin)));
+            }
+        }
+        update revisedCases;
+    }
+
+    private static void setCommCaseOriginToQueueId(){
+        List<String> queueNames =  new List<String>();
+        for(Community_Settings__mdt queue: [  Select value__c from Community_Settings__mdt where module__c='case_queue' ]){
+            queueNames.add(queue.value__c);
+        }
+        List<Group> queues = [select Id from Group where  Type = 'Queue' and Name in :queueNames];
+        Map<String, Id> caseOriginTogroupIdMap = new Map<String, Id>();
+        for(Group queueRecord: queues){
+            caseOriginTogroupIdMap.put(queueRecord.Name, queueRecord.Id);
+        }
+        commCaseOriginToQueueId = caseOriginTogroupIdMap;
+    }
+}
